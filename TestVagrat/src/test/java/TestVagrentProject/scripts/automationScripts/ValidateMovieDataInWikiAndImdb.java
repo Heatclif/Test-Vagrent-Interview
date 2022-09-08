@@ -9,7 +9,7 @@ import org.testng.annotations.*;
 
 import static java.lang.String.format;
 
-public class MovieReleaseDateValidation extends BaseAutomationScript {
+public class ValidateMovieDataInWikiAndImdb extends BaseAutomationScript {
     @DataProvider
     private static Object[][] SearchData() {
            return new Object[][] {
@@ -27,19 +27,19 @@ public class MovieReleaseDateValidation extends BaseAutomationScript {
 
     @Test(dataProvider = "SearchData")
     public static void validateMovieReleaseDate(String movie) {
-        getDateFromWikipedia(movie);
-        getDateFromImdb(movie);
+        getDataFromWikipedia(movie);
+        getDataFromImdb(movie);
         compareData();
     }
 
-    public static void getDateFromWikipedia(String movie) {
+    public static void getDataFromWikipedia(String movie) {
         new WikiHomePage(driver)
                 .searchString(movie)
                 .getMovieReleaseDate()
                 .getMovieOrigin();
     }
 
-    public static void getDateFromImdb(String movie) {
+    public static void getDataFromImdb(String movie) {
         new ImdbHomePage(driver)
                 .searchMovie(movie)
                 .selectMovieFromList(movie)
