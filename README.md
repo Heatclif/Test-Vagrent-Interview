@@ -2,6 +2,7 @@
 This is a task for TestVagrent interview
 
 Main Project: TestVagrent
+
 Test Script: src/test/java/TestVagrent/scripts/automationScripts/MovieReleaseDateValidation.java
 
 Chromedrive is present in the repository under TestVagrent/driver/
