@@ -1,10 +1,8 @@
-package TestVagrent.pages.imdb;
+package TestVagrentProject.pages.imdb;
 
-import TestVagrent.pages.BasePage;
+import TestVagrentProject.pages.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 
 import static java.lang.String.format;
 

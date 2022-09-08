@@ -1,11 +1,17 @@
-package TestVagrent.scripts;
+package TestVagrentProject.scripts;
 
+import TestVagrentProject.utilities.DataStorage;
 import org.openqa.selenium.WebDriver;
 
 import java.time.Duration;
 
 public class BaseAutomationScript {
+
+    /***
+     * This page is used as a base design for all automation classes.
+     */
     public static WebDriver driver;
+    public static DataStorage dataStorage = DataStorage.getInstance();
 
     public BaseAutomationScript() {
         System.setProperty("webdriver.chrome.driver", "driver\\chromedriver.exe");
